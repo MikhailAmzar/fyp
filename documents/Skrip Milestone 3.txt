@@ -1,0 +1,205 @@
+Assalamualaikum and good morning  to my examiner, Madam Sera Syarmila.
+My name is Mikhail Amzar, Student id CS0107477.
+
+I am a Final Year student undertaking Bachelor of Computer Science
+Today I will be presenting my final year project,
+titled Network Intrusion Detection Model Based on Real and Encrypted Synthetic Attack Traffic using Decision Tree Algorithm.
+-
+
+For this project, the motivation is to develop a network intrusion detection model that can analyze attack traffic from a dataset containing real and encrypted synthetic attack traffic. The model will use a decision tree algorithm and it will be able to provide a dashboard to save the models evaluation metrics.
+-
+The objectives in this project are to design a network intrusion detection machine learning model that applies Decision Tree algorithm.
+and to produce dashboard that can log the models results and details.
+- 
+The user scope of this project will be users who will use the dashboard to observe the performance of the models and its related details.
+-
+The system scope is - Implementing decision tree machine learning algorithm. 
+
+System will perform only intrusion detection. 
+
+and Using publicly available dataset for the model training which is 
+Hikari-2021.
+-
+
+EXPECTED OUTCOMES
+
+Firstly, A machine learning model and dashboard must be produced for the network intrusion system.
+
+Secondly, The network intrusion detection model should apply Decision Tree algorithm.
+
+LITERATURE
+
+Moving on to literature review, I have explored related topics like Network intrusion detection system, and Machine learning to get an idea and to better understand the scope of this project.
+
+NETWORK IDS
+
+A network intrusion detection system (NIDS) is a type of security system that monitors a network for suspicious activity and alerts administrators when such activity is detected and they are designed to identify malicious activity such as hacking attempts, malware infections, and other security threats.
+-
+Network intrusion detection systems (NIDS) and host intrusion detection systems (HIDS) are both types of security systems but the key differences are that  NIDS monitor network traffic on a network-wide basis and placed at points within the network, whereas HIDS monitor activity on a single host or device because it is installed on a single device.
+-
+There are also differences in terms of the detection method:
+Signature-based detection involves comparing incoming network traffic to a database of known attack patterns or "signatures." If the traffic matches a known signature, the NIDS will flag it as potentially malicious and alert the administrator.
+-
+Anomaly-based detection, on the other hand, involves monitoring normal network traffic patterns and behaviors and flagging any deviations from these patterns as potentially malicious. This approach is useful for detecting new or unknown threats that may not be recognized by signature-based detection.
+-
+MAACHINE LEARNING
+
+Next, Machine learning is a subfield of artificial intelligence that involves the development of algorithms and statistical models that allow computers to learn from and make decisions based on data, without being explicitly programmed to do so. ML Algorithm is trained on a large dataset and it makes predictions or decisions based on that training. For example, a machine learning algorithm might be trained on a dataset of customer data, including information about their demographics, purchasing history, and responses to marketing campaigns.
+-
+The algorithm could then be used to predict which customers are most likely to make a purchase in the future, or to personalize marketing messages based on the individual customer's characteristics.
+-
+There are several different types of machine learning, including supervised learning, unsupervised learning.. In supervised learning, the algorithm is trained on a labeled dataset, meaning that the data includes both input data and the corresponding correct output. 
+
+In unsupervised learning, the algorithm is not provided with labeled training data, but it must discover patterns and relationships in the data on its own.
+
+SOFTWARE METHODOL
+
+Additionally, software development methodology, which is a framework that is used to plan, control, and organize the process of developing a software product.
+
+Waterfall: The waterfall methodology is a linear, sequential approach to software development in which each phase of the development process must be completed before the next phase can begin. This approach is characterized by a focus on detailed planning and strict adherence to a set of predefined requirements.
+
+Agile:  The agile methodology is a flexible, iterative approach to software development that emphasizes rapid prototyping, frequent releases, and continuous improvement. Agile methodologies are designed to be adaptable and responsive to changing requirements and to encourage collaboration and communication among team members.
+
+
+DECISION TREE
+
+Moving on, A decision tree is a type of algorithm used in machine learning for classification and regression tasks. It is a flowchart-like tree structure that represents a set of decisions and their possible outcomes. The tree is made up of nodes, which represent the decisions that need to be made, and edges, which represent the possible outcomes of those decisions.
+-
+There are two types of decision tree, they are categorized based on the type of problem and data involved.
+
+Firstly,
+
+Classification tree ;The model is trained to classify whether data is a part of a known object class. Models are trained to assign class labels to processed data.
+
+Regression Tree ; Models are designed to forecast or predict a continuous value, such as predicting house prices or stock price changes.
+
+MACHINE LEARNING MODELLING CYCLE
+
+Next, Machine learning modelling cycle which comprises of important steps that need to be conducted in a machine learning project. This is suppose to be like a guide and provide context when developing machine learning project.
+
+1. The first phase in the machine learning modeling cycle is to manage the data that will be use to train and evaluate the model. This may involve gathering data from multiple sources, cleaning and preprocessing the data to remove any errors or inconsistencies, and splitting the data into training and test sets.
+
+
+2. Once the data is prepared, the next step is to choose a machine learning model that is appropriate for the problem. Starting with the type of learning task, a machine learning task is a form of prediction made based on the problem or query and the available data. The classification task, for example, allocates data to categories, whereas the clustering task groups data based on similarity. 
+
+
+3. After that, evaluating models. This phase involves fitting the test dataset to the trained machine learning model. The next step is to evaluate its performance. This helps  determine how well the model is able to analyze the new data.
+
+4. If the model's performance is satisfactory, the final step is to deploy the model in a production environment. This may involve integrating the model into an existing application or system, or creating a standalone application to make use of the model's predictions. 
+
+TOOLS AND DASHBOARD
+Several tools for the machine learning model and dashboard were explored during FYP1.
+
+METHODOLOGY
+AGILE approach is applied throughout the project, applying multiple changes and improvement to the machine learning building process.
+
+Google Colab, an online platform utilizing Jupyter Notebook is chosen as the machine learning platform. User only need a google account to access this web application. It is easy to setup and user will get access to perform code runtimes using hardware via Google Cloud. The python notebook allows to include documentation in the same code space.
+
+For dashboard tool, Neptune.ai is chosen. Neptune.ai is an online machine learning platform that is designed to support machine learning projects with logging features to record model metrics and runtime metrics. It is an integration with Google Colab.
+
+DATASET HIKARI21
+Chosen because it is a recent dataset and therefore there not many research surrounding it, especially regarding decision tree.
+Contains a variety of traffic types. With 6 target traffic type in total:
+Background
+Benign
+Bruteforce
+Bruteforce-XML
+Probing
+XMRGICC CryptoMiner
+Should be sufficient for the scope of this project.
+
+It also Contains ground truth data from real production network (Background) and is completely labelled to allow for easy analysis.
+After the project completes, we will also know whether the dataset it self is a viable dataset that can be used with a decision tree algorithm.
+
+DESIGN
+
+DASHBOARD
+
+-----
+
+Implementation
+DATA PREPROCESSING
+
+Using colab as a platform to execute the codes,
+I started by importing required libraries like pandas for managing datasets and cleaning the data, Matplotlib to plot graph figures, sklearn for the required machine learning libraries.
+Following that, the HIKARI21 dataset which is located inside a Google drive is imported to the Colab runtime.
+
+To prepare the data, first I observed for any null values and unwanted columns that cant be used in the model. I also visualize the data to observe the distribution of target classes.
+
+CHART
+
+The figure on the left shows the distribution of Malicious and non-malicious traffic in the dataset while the figure on the right shows a specific figure of distribution sorted according to the type of traffic. It is clear that the dataset is an imbalanced dataset because of the uneven distribution between target classes where the Non-Malicious traffic (Background and Benign) far outnumber the Malicious traffic (other traffic).
+
+SPLIT
+
+Next step is to isolate the features and target class column from the dataset.
+
+After that, splitting dataset into train set and test set using train_test_split method from sklearn.
+
+Train set is the portion of dataset that will be used to train the model. 
+
+Test set will be the data for the model to conduct prediction on. To see if the model are able to predict and classify using what it learned from the train set.
+70% train set, 30% Test set, as set by the test_size parameter.
+
+WORKFLOW of the model building is shown here.
+
+Imbalanced Dataset
+
+Since the dataset is imbalanced, it is expected that it might affect the Decision tree's ability to predict target classes accurately due to the learning bias towards majority target classes like Benign and Background traffic. 
+We want to avoid this because in an IDS, all traffic type should be recognized accurately.
+
+After the models finish testing phase, I extracted the classification report from the model to observe the evaluation scores. The classification report displays accuracy, precision, recall, and f1 score for each class in the model aswell as the average.
+
+The accuracy score is recorded but will not be taken as an accurate representation of the models’ performance. This is because accuracy score metric simplifies the performance of a classification model as the total of correct predictions out of total predictions. In the case of an imbalanced dataset like HIKARI-21, the test data with original distribution consist of majority classes (Benign and Background) with significantly higher number of instances compared to other minority classes, so even when accuracy shows a relatively high score, it does not paint the reality of the model’s capability to make correct prediction on all classes.
+
+For this dataset and problem, precision and recall are equally important because it involves multiple classes of traffic types that need to be identified correctly. For instance, an intrusion detection model should not incorrectly classify Bruteforce or other malicious traffic as Benign as it would allow the malicious traffic to pass through the network defense. Likewise, the intrusion detection model should not classify a Benign or non-malicious traffic as a malicious traffic because it would hinder legit users from accessing online services since their non-malicious traffic is classified as malicious and consequently blocked. Therefore, the macro average F1 score seems appropriate to gauge how well the models are performing, since macro average calculates the unweighted mean of all per class F1 scores. 
+
+MULTICLASS
+
+Here is a table comparing other algorithm score, from the research paper of the creators of HIKARI-21 dataset, against the three DT model.
+The decision trees do not show great scores for this problem compared to other algorithms.
+
+Another evaluation metric that is useful for classification problem like this is the confusion matrix as it shows the prediction that the models make.
+
+BINARY
+
+Since the multiclass classification did not produce good scores, a binary classification is conducted. Instead of trying to predict all 6 target classes in one model, binary classif only involves two classes; like shown here we will use Background and Bruteforce-XML. The previous steps are repeated > Train test split > Training model > Testing model.
+
+The binary classif decision tree manage to produce great scores.
+Because of that.
+
+CONCL
+
+Based on the steps conducted in this project, we managed to fulfil the project objective of developing a network intrusion model using decision tree with the hikari21 dataset.
+
+However, the results show that multiclass classification with this dataset is not viable as the decision tree model was unable to perform viable prediction on the test data leading to its low evaluation scores.
+
+Binary classification on the other hand can produce better scores with some exception (Benign). Therefore, HIKARI-21 dataset is better suited for an IDS that employs binary classification on specific traffics.
+
+Neptune.ai  dashboard integration is implemented.
+Allows to track different machine learning models.
+Keep evaluation metrics and images.
+Allow for easier workflow for recording machine learning results.
+
+
+
+TEMP
+
+In this project, I have performed several techniques to develop a network intrusion detection model using decision tree algorithm based on HIKARI-21 dataset of real and encrypted synthetic attack traffic. Resampling methods are involved when preparing the training data as HIKARI-21 is an imbalanced dataset. Three decision tree models were each trained with normal training data distribution, oversampled training data, and undersampled training data respectively. All three models were tested with test data with default distribution. Based on the techniques and activities conducted, Developing multiclass decision tree models that is effective in predicting malicious and non-malicious traffic using HIKARI-21 dataset were unsuccesfull because of its poor performance compared to other algorithm. Therefore, the models developed in this paper are unfit for deployment since it cannot deliver acceptable results that achieve its objectives. This could be due to the complex and huge differences in distribution in HIKARI-21 and limitations of the decision tree algorithm, especially when dealing with imbalanced dataset and multiclass problems.
+
+- bagitau apa boleh improve pasal project
+(dataset yg lagi sesuai), (algo yg lagi sesuai), (kalau nak guna untuk binary classifi), (features byk/kurang)
+But, the dashboard for the model is successfully created by integrating Neptune into Colab to log evaluation scores and upload images for metrics. This can ease efforts to observe and compare model performances after testing, because Google Colab's runtime does not store data permanently. The integration can be beneficial to other machine learning projects with different algorithms aswell.
+
+
+
+Undersampling may have achieved slightly better results compared to SMOTE in terms of recall, but it still suffered from a high number of false positive when predicting non-malicious traffic. However, the model with undersampling (dtRUS) shows a chance for improvement if a way to reduce false positives can be achieved in future work. 
+
+That is all from me, thank you.
+AGILE
+
+
+It allows for rapid iteration: Agile methodologies are built around the idea of delivering working software in short, iterative cycles called "sprints." This allows teams to quickly get feedback from customers and incorporate that feedback into the development process.
+
+It promotes continuous improvement: Agile methodologies encourage to continuously assess and improve their processes and practices, which can lead to better quality software and more efficient development.
+
